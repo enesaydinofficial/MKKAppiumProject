@@ -5,7 +5,6 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.URL;
@@ -27,10 +26,11 @@ public class MKKBase {
         cap.setCapability("autoGrantPermissions", "true");
         cap.setCapability("noReset", "true");
         cap.setCapability("appPackage", "org.sbm.ktt");
-        cap.setCapability("appActivity", "org.sbm.ktt.MainActivity");
+        cap.setCapability("appActivity", "org.sbm.ktt.SplashActivity");
         cap.setCapability(NEW_COMMAND_TIMEOUT, 1000);
 
         driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+
     }
 
     @After
@@ -39,11 +39,6 @@ public class MKKBase {
         if (driver != null) {
             driver.closeApp();
         }
-    }
-
-    @Test
-    public void asdas() {
-
     }
 
 

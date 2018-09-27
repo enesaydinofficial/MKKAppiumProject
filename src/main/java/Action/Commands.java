@@ -3,12 +3,13 @@ package Action;
 import MainPackage.MKKBase;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Commands extends MKKBase {
 
-    public static void click(MobileElement element) {
+    public static void click(WebElement element) {
         element.click();
 
     }
@@ -22,7 +23,7 @@ public class Commands extends MKKBase {
         element.isDisplayed();
     }
 
-    public static void waitElementToBeClickable(MobileElement element) {
+    public static void waitElementToBeClickable(WebElement element) {
 
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(element));
