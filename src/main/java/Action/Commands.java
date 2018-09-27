@@ -3,6 +3,7 @@ package Action;
 import MainPackage.MKKBase;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,6 +12,11 @@ public class Commands extends MKKBase {
 
     public static void click(WebElement element) {
         element.click();
+
+    }
+
+    public static String getText(WebElement element) {
+        return element.getText();
 
     }
 
@@ -41,5 +47,9 @@ public class Commands extends MKKBase {
         scroll.press(pressElement).moveTo(moveElement).release().perform();
     }
 
+    public static void assertEquals(String expected, String actual) {
+        Assert.assertEquals(expected, actual);
+
+    }
 
 }
