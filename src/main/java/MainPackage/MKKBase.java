@@ -29,7 +29,7 @@ public class MKKBase {
         cap.setCapability("appActivity", "org.sbm.ktt.SplashActivity");
         cap.setCapability(NEW_COMMAND_TIMEOUT, 1000);
 
-        driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+        driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
 
     }
 
